@@ -1,0 +1,40 @@
+{
+  "name": "subject-zero",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:leak": "node scripts/test-bundle-leak.mjs",
+    "test:rls": "node scripts/test-rls.mjs",
+    "test:e2e": "playwright test",
+    "check:images": "node scripts/check-images.mjs",
+    "db:clean": "node --env-file=.env.local scripts/cleanup-db.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1",
+    "framer-motion": "^12.4.7",
+    "howler": "^2.2.4",
+    "next": "16.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "^0.0.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@tailwindcss/postcss": "^4",
+    "@types/howler": "^2.2.12",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.3",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vitest": "^3.0.7"
+  }
+}

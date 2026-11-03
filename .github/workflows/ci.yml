@@ -1,0 +1,48 @@
+name: Subject Zero CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: Lint, Test, Build & Security Leak Audit
+    runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: https://example.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummy_anon_key
+      SUPABASE_SERVICE_ROLE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.dummy_service_role_key
+      ADMIN_PASSWORD: ci_test_password_12345
+      SESSION_SECRET: ci_session_secret_32_characters_minimum_entropy_123456
+      EVENT_MODE: remote
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Code Style & ESLint Check
+        run: npm run lint
+
+      - name: Run Unit Tests
+        run: npm test
+
+      - name: Build Next.js Application
+        run: npm run build
+
+      - name: Check Scene Image Integrity
+        run: npm run check:images
+
+      - name: Bundle Leak & Secret Exposure Audit
+        run: npm run test:leak -- --no-build
