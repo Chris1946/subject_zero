@@ -1,33 +1,36 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: var(--bg, #0b0d10);
-  --color-panel: var(--panel, #12161b);
-  --color-panel-border: var(--panel-border, #1f283d);
-  --color-text: var(--text, #e8edf2);
-  --color-text-muted: var(--text-muted, #9aa8c2);
-  --color-accent: var(--accent, #6fa8dc);
-  --color-accent2: var(--accent2, #93c5fd);
-  --color-warn: var(--warn, #ff7a1a);
-  --color-danger: var(--danger, #ff5c6a);
-  --color-success: var(--success, #4ade80);
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-background: var(--bg, #130205);
+  --color-panel: var(--panel, #1e0608);
+  --color-panel-border: var(--panel-border, #5c1a1a);
+  --color-text: var(--text, #fdeeed);
+  --color-text-muted: var(--text-muted, #c08080);
+  --color-accent: var(--accent, #ff4500);
+  --color-accent2: var(--accent2, #ff8c00);
+  --color-warn: var(--warn, #ff8c00);
+  --color-danger: var(--danger, #ff2244);
+  --color-success: var(--success, #ff6b35);
+  --color-cold-blue: var(--cold-blue, #ff4500);
+  --font-mono: var(--loaded-font-mono, "VT323"), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  --font-pixel: var(--loaded-font-pixel, "Press Start 2P"), monospace;
 }
 
-/* Base Theme Tokens & CSS Custom Properties */
+/* ─── Base Theme: Halloween Midnight ─── */
 :root,
 [data-round="lobby"] {
   color-scheme: dark;
-  --bg: #07080c;
-  --panel: #0b0f1a;
-  --panel-border: #1f283d;
-  --text: #e8edf8;
-  --text-muted: #9aa8c2;
-  --accent: #6fa8dc;
-  --accent2: #93c5fd;
-  --warn: #ff7a1a;
-  --danger: #ff5c6a;
-  --success: #4ade80;
+  --bg: #0e0103;
+  --panel: #1a0407;
+  --panel-border: #5c1a1a;
+  --text: #fdeeed;
+  --text-muted: #b87070;
+  --accent: #ff4500;
+  --accent2: #ff8c00;
+  --warn: #ff8c00;
+  --danger: #ff2244;
+  --success: #ff6b35;
+  --cold-blue: #ff4500;
 
   --theme-bg: var(--bg);
   --theme-panel: var(--panel);
@@ -39,53 +42,24 @@
   --theme-warn: var(--warn);
   --theme-danger: var(--danger);
   --theme-success: var(--success);
-  --theme-glow-radius: 10px;
-  --theme-scanline-opacity: 0.08;
-  --theme-vignette-strength: 0.55;
-  --theme-grain-opacity: 0.03;
-  --theme-fog-opacity: 0.3;
+  --theme-glow-radius: 14px;
+  --theme-scanline-opacity: 0.12;
+  --theme-vignette-strength: 0.7;
+  --theme-grain-opacity: 0.045;
+  --theme-fog-opacity: 0.5;
 }
 
 [data-round="round1"] {
-  --bg: #04141c;
-  --panel: #07161f;
-  --panel-border: #163847;
-  --text: #e8edf2;
-  --text-muted: #94a9b8;
-  --accent: #3ee6c8;
-  --accent2: #7fffd4;
-  --warn: #ff7a1a;
-  --danger: #ff5c6a;
-  --success: #3ee6c8;
-
-  --theme-bg: var(--bg);
-  --theme-panel: var(--panel);
-  --theme-panel-border: var(--panel-border);
-  --theme-text: var(--text);
-  --theme-text-muted: var(--text-muted);
-  --theme-accent: var(--accent);
-  --theme-accent2: var(--accent2);
-  --theme-warn: var(--warn);
-  --theme-danger: var(--danger);
-  --theme-success: var(--success);
-  --theme-glow-radius: 12px;
-  --theme-scanline-opacity: 0.12;
-  --theme-vignette-strength: 0.65;
-  --theme-grain-opacity: 0.04;
-  --theme-fog-opacity: 0.15;
-}
-
-[data-round="round2"] {
-  --bg: #0d0620;
-  --panel: #120826;
-  --panel-border: #381775;
-  --text: #f1ebfc;
-  --text-muted: #b1a2ce;
-  --accent: #c084fc;
-  --accent2: #ff2bd6;
-  --warn: #ffb347;
-  --danger: #ff5c8a;
-  --success: #4ade80;
+  --bg: #0e0103;
+  --panel: #1a0407;
+  --panel-border: #5c1a1a;
+  --text: #fdeeed;
+  --text-muted: #b87070;
+  --accent: #ff4500;
+  --accent2: #ff8c00;
+  --warn: #ff8c00;
+  --danger: #ff2244;
+  --success: #ff6b35;
 
   --theme-bg: var(--bg);
   --theme-panel: var(--panel);
@@ -99,80 +73,22 @@
   --theme-success: var(--success);
   --theme-glow-radius: 14px;
   --theme-scanline-opacity: 0.14;
-  --theme-vignette-strength: 0.7;
-  --theme-grain-opacity: 0.035;
+  --theme-vignette-strength: 0.72;
+  --theme-grain-opacity: 0.05;
   --theme-fog-opacity: 0.2;
 }
 
-[data-round="round3"] {
-  --bg: #021a0c;
-  --panel: #041d0e;
-  --panel-border: #124e29;
-  --text: #ebfdf2;
-  --text-muted: #93c2a4;
-  --accent: #7dffb0;
-  --accent2: #c8ffd9;
-  --warn: #ff7a1a;
-  --danger: #ff5c6a;
-  --success: #7dffb0;
-
-  --theme-bg: var(--bg);
-  --theme-panel: var(--panel);
-  --theme-panel-border: var(--panel-border);
-  --theme-text: var(--text);
-  --theme-text-muted: var(--text-muted);
-  --theme-accent: var(--accent);
-  --theme-accent2: var(--accent2);
-  --theme-warn: var(--warn);
-  --theme-danger: var(--danger);
-  --theme-success: var(--success);
-  --theme-glow-radius: 15px;
-  --theme-scanline-opacity: 0.1;
-  --theme-vignette-strength: 0.75;
-  --theme-grain-opacity: 0.04;
-  --theme-fog-opacity: 0.25;
-}
-
-[data-round="round4"] {
-  --bg: #1a0f05;
-  --panel: #1f1307;
-  --panel-border: #4a2a11;
-  --text: #fdf6ee;
-  --text-muted: #c4ad95;
-  --accent: #ffb020;
-  --accent2: #b57cff;
-  --warn: #ff7a1a;
-  --danger: #ff5c6a;
-  --success: #4ade80;
-
-  --theme-bg: var(--bg);
-  --theme-panel: var(--panel);
-  --theme-panel-border: var(--panel-border);
-  --theme-text: var(--text);
-  --theme-text-muted: var(--text-muted);
-  --theme-accent: var(--accent);
-  --theme-accent2: var(--accent2);
-  --theme-warn: var(--warn);
-  --theme-danger: var(--danger);
-  --theme-success: var(--success);
-  --theme-glow-radius: 12px;
-  --theme-scanline-opacity: 0.11;
-  --theme-vignette-strength: 0.7;
-  --theme-grain-opacity: 0.045;
-  --theme-fog-opacity: 0.2;
-}
-
-[data-round="round5"] {
-  --bg: #120305;
-  --panel: #1c050a;
-  --panel-border: #520d18;
-  --text: #feeef0;
-  --text-muted: #caa0a4;
-  --accent: #ff4d5e;
-  --accent2: #e8f4ff;
-  --warn: #ffb020;
-  --danger: #ff4d5e;
-  --success: #4ade80;
+[data-round="round2"] {
+  --bg: #100205;
+  --panel: #1c0408;
+  --panel-border: #6e1a28;
+  --text: #fdeeed;
+  --text-muted: #c08080;
+  --accent: #ff2244;
+  --accent2: #ff6080;
+  --warn: #ff8c00;
+  --danger: #ff2244;
+  --success: #ff6b35;
 
   --theme-bg: var(--bg);
   --theme-panel: var(--panel);
@@ -185,32 +101,119 @@
   --theme-danger: var(--danger);
   --theme-success: var(--success);
   --theme-glow-radius: 16px;
-  --theme-scanline-opacity: 0.16;
-  --theme-vignette-strength: 0.85;
+  --theme-scanline-opacity: 0.15;
+  --theme-vignette-strength: 0.78;
+  --theme-grain-opacity: 0.045;
+  --theme-fog-opacity: 0.25;
+}
+
+[data-round="round3"] {
+  --bg: #0f0202;
+  --panel: #1b0405;
+  --panel-border: #602020;
+  --text: #fdeeed;
+  --text-muted: #c08888;
+  --accent: #ff6b35;
+  --accent2: #ffb347;
+  --warn: #ff8c00;
+  --danger: #ff2244;
+  --success: #ff6b35;
+
+  --theme-bg: var(--bg);
+  --theme-panel: var(--panel);
+  --theme-panel-border: var(--panel-border);
+  --theme-text: var(--text);
+  --theme-text-muted: var(--text-muted);
+  --theme-accent: var(--accent);
+  --theme-accent2: var(--accent2);
+  --theme-warn: var(--warn);
+  --theme-danger: var(--danger);
+  --theme-success: var(--success);
+  --theme-glow-radius: 16px;
+  --theme-scanline-opacity: 0.12;
+  --theme-vignette-strength: 0.8;
+  --theme-grain-opacity: 0.05;
+  --theme-fog-opacity: 0.3;
+}
+
+[data-round="round4"] {
+  --bg: #100202;
+  --panel: #1c0405;
+  --panel-border: #6b1a1a;
+  --text: #fdeeed;
+  --text-muted: #c08080;
+  --accent: #ffb020;
+  --accent2: #ff4500;
+  --warn: #ff8c00;
+  --danger: #ff2244;
+  --success: #ff6b35;
+
+  --theme-bg: var(--bg);
+  --theme-panel: var(--panel);
+  --theme-panel-border: var(--panel-border);
+  --theme-text: var(--text);
+  --theme-text-muted: var(--text-muted);
+  --theme-accent: var(--accent);
+  --theme-accent2: var(--accent2);
+  --theme-warn: var(--warn);
+  --theme-danger: var(--danger);
+  --theme-success: var(--success);
+  --theme-glow-radius: 14px;
+  --theme-scanline-opacity: 0.12;
+  --theme-vignette-strength: 0.82;
   --theme-grain-opacity: 0.055;
-  --theme-fog-opacity: 0.35;
+  --theme-fog-opacity: 0.25;
 }
 
-/* Crossfading on theme switch (1.2s smooth transition) */
+[data-round="round5"] {
+  --bg: #0a0101;
+  --panel: #150304;
+  --panel-border: #7a0d18;
+  --text: #fdeeed;
+  --text-muted: #caa0a0;
+  --accent: #ff2244;
+  --accent2: #ff4500;
+  --warn: #ffb020;
+  --danger: #ff2244;
+  --success: #ff6b35;
+
+  --theme-bg: var(--bg);
+  --theme-panel: var(--panel);
+  --theme-panel-border: var(--panel-border);
+  --theme-text: var(--text);
+  --theme-text-muted: var(--text-muted);
+  --theme-accent: var(--accent);
+  --theme-accent2: var(--accent2);
+  --theme-warn: var(--warn);
+  --theme-danger: var(--danger);
+  --theme-success: var(--success);
+  --theme-glow-radius: 18px;
+  --theme-scanline-opacity: 0.18;
+  --theme-vignette-strength: 0.9;
+  --theme-grain-opacity: 0.06;
+  --theme-fog-opacity: 0.4;
+}
+
+/* ─── Smooth theme crossfade ─── */
 [data-round] {
-  transition: color 1.2s ease-in-out, border-color 1.2s ease-in-out, background-color 1.2s ease-in-out, box-shadow 1.2s ease-in-out;
+  transition: color 1.2s ease-in-out, border-color 1.2s ease-in-out,
+    background-color 1.2s ease-in-out, box-shadow 1.2s ease-in-out;
 }
-
 [data-round] * {
   transition: border-color 1.2s ease-in-out, box-shadow 1.2s ease-in-out;
 }
 
-/* Accessible focus outline with accent color */
+/* ─── Focus outlines ─── */
 button:focus-visible,
 input:focus-visible,
 a:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-  outline: 2px solid var(--accent, #6fa8dc) !important;
+  outline: 2px solid var(--accent, #ff4500) !important;
   outline-offset: 2px !important;
 }
 
-/* Reduced motion disables transitions & animations instantly */
+/* ─── Reduced motion ─── */
 @media (prefers-reduced-motion: reduce) {
   [data-round],
   [data-round] *,
@@ -221,119 +224,192 @@ select:focus-visible {
     transform: none !important;
   }
 }
-
 .theme-reduced-motion,
 .theme-reduced-motion * {
   transition: none !important;
   animation: none !important;
   transform: none !important;
 }
-
-/* Tab visibility pause */
 .theme-anim-paused * {
   animation-play-state: paused !important;
 }
 
-/* GPU-Friendly Backdrop Keyframe Animations */
-@keyframes crtScan {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
+/* ═══════════════════════════════════════
+   HALLOWEEN MIDNIGHT PIXEL BACKGROUND
+   Repeating dark-red pumpkin pattern
+═══════════════════════════════════════ */
+.halloween-bg-pattern {
+  background-color: #0e0103;
+  background-image:
+    /* Faint repeating skull/pumpkin SVG pattern */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23300808' fill-opacity='0.4'%3E%3Cpath d='M40 10 C26 10 18 20 18 30 C18 38 22 44 28 47 L26 56 L54 56 L52 47 C58 44 62 38 62 30 C62 20 54 10 40 10 Z M32 56 L30 64 L50 64 L48 56 Z M34 36 C34 33 36 31 38 31 C40 31 42 33 42 36 C42 39 40 41 38 41 C36 41 34 39 34 36 Z M46 36 C46 33 48 31 50 31 C52 31 54 33 54 36 C54 39 52 41 50 41 C48 41 46 39 46 36 Z M32 46 L35 42 L45 42 L48 46 L44 46 L42 50 L38 50 L36 46 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
 }
 
+/* ═══════════════════════════════════════
+   PIXELATED FIRE GLOW EFFECTS
+═══════════════════════════════════════ */
+.pixel-fire-glow {
+  box-shadow:
+    0 0 8px 2px rgba(255, 69, 0, 0.6),
+    0 0 20px 4px rgba(255, 100, 0, 0.3),
+    0 0 40px 8px rgba(180, 20, 0, 0.15);
+}
+
+.pixel-text-glow {
+  text-shadow:
+    0 0 6px rgba(255, 69, 0, 0.9),
+    0 0 16px rgba(255, 100, 0, 0.6),
+    0 0 30px rgba(200, 30, 0, 0.3);
+}
+
+.pixel-border-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 69, 0, 0.5),
+    0 0 10px rgba(255, 69, 0, 0.25),
+    inset 0 0 10px rgba(255, 20, 0, 0.05);
+}
+
+/* ═══════════════════════════════════════
+   PIXELATION / 8-BIT RENDERING
+═══════════════════════════════════════ */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Pixel-stepped border (simulates chunky 8-bit outline) */
+.pixel-corners {
+  clip-path: polygon(
+    4px 0%, calc(100% - 4px) 0%,
+    100% 4px, 100% calc(100% - 4px),
+    calc(100% - 4px) 100%, 4px 100%,
+    0% calc(100% - 4px), 0% 4px
+  );
+}
+
+/* ═══════════════════════════════════════
+   HALLOWEEN SCANLINES (thicker, warmer)
+═══════════════════════════════════════ */
+@keyframes crtScan {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
 .crt-scan-band {
-  animation: crtScan 8s linear infinite;
+  animation: crtScan 10s linear infinite;
   will-change: transform;
 }
 
-@keyframes dataRain {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100vh);
-  }
+/* ═══════════════════════════════════════
+   FIRE / EMBER PARTICLE DRIFT
+═══════════════════════════════════════ */
+@keyframes emberRise {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.8; }
+  50%  { transform: translate(var(--drift-x, 12px), -40px) scale(0.8); opacity: 0.5; }
+  100% { transform: translate(var(--drift-x2, -8px), -80px) scale(0.4); opacity: 0; }
+}
+.ember-particle {
+  animation: emberRise var(--ember-dur, 3s) ease-out infinite;
+  will-change: transform, opacity;
 }
 
+@keyframes flameFlicker {
+  0%, 100% { transform: scaleY(1) scaleX(1); opacity: 1; }
+  25%       { transform: scaleY(1.08) scaleX(0.95); opacity: 0.9; }
+  50%       { transform: scaleY(0.95) scaleX(1.05); opacity: 1; }
+  75%       { transform: scaleY(1.05) scaleX(0.98); opacity: 0.95; }
+}
+.flame-flicker {
+  animation: flameFlicker 1.6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* ═══════════════════════════════════════
+   HALLOWEEN FOG ORBS (warm, blood-red)
+═══════════════════════════════════════ */
+@keyframes fogDrift1 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(60px, 30px); }
+}
+.lobby-fog-orb-1 {
+  animation: fogDrift1 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes fogDrift2 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(-50px, -40px); }
+}
+.lobby-fog-orb-2 {
+  animation: fogDrift2 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes fogDrift3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(30px, -20px) scale(1.05); }
+  66%       { transform: translate(-20px, 15px) scale(0.98); }
+}
+.lobby-fog-orb-3 {
+  animation: fogDrift3 35s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ═══════════════════════════════════════
+   SPARKLE / STAR TWINKLE
+═══════════════════════════════════════ */
+@keyframes sparkleTwinkle {
+  0%, 100% { opacity: 0; transform: scale(0.5) rotate(0deg); }
+  50%       { opacity: 1; transform: scale(1) rotate(45deg); }
+}
+.sparkle {
+  animation: sparkleTwinkle var(--sparkle-dur, 2s) ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+/* ═══════════════════════════════════════
+   DATA RAIN (orange-tinted for Halloween)
+═══════════════════════════════════════ */
+@keyframes dataRain {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
 .data-rain-stream {
   animation: dataRain 14s linear infinite;
   will-change: transform;
 }
 
+/* ═══════════════════════════════════════
+   PULSE CORE / EMERGENCY
+═══════════════════════════════════════ */
 @keyframes pulseCoreRing {
-  0%, 100% {
-    transform: scale(0.92);
-    opacity: 0.08;
-  }
-  50% {
-    transform: scale(1.08);
-    opacity: 0.18;
-  }
+  0%, 100% { transform: scale(0.92); opacity: 0.08; }
+  50%       { transform: scale(1.08); opacity: 0.2; }
 }
-
-.pulse-core-ring {
-  animation: pulseCoreRing 6s ease-in-out infinite;
-  will-change: transform, opacity;
-}
+.pulse-core-ring { animation: pulseCoreRing 6s ease-in-out infinite; will-change: transform, opacity; }
 
 @keyframes pulseCoreWave {
-  0%, 100% {
-    transform: scale(0.88);
-    opacity: 0.06;
-  }
-  50% {
-    transform: scale(1.12);
-    opacity: 0.18;
-  }
+  0%, 100% { transform: scale(0.88); opacity: 0.06; }
+  50%       { transform: scale(1.12); opacity: 0.2; }
 }
-
-.pulse-core-wave {
-  animation: pulseCoreWave 6s ease-in-out infinite;
-  will-change: transform, opacity;
-}
+.pulse-core-wave { animation: pulseCoreWave 6s ease-in-out infinite; will-change: transform, opacity; }
 
 @keyframes dustFloat {
-  0%, 100% {
-    transform: translate(0, 0);
-    opacity: 0.12;
-  }
-  50% {
-    transform: translate(14px, -24px);
-    opacity: 0.28;
-  }
+  0%, 100% { transform: translate(0, 0); opacity: 0.12; }
+  50%       { transform: translate(14px, -24px); opacity: 0.28; }
 }
-
-.dossier-dust-mote {
-  animation: dustFloat 18s ease-in-out infinite;
-  will-change: transform, opacity;
-}
+.dossier-dust-mote { animation: dustFloat 18s ease-in-out infinite; will-change: transform, opacity; }
 
 @keyframes emergencySweep {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-
-.emergency-beacon {
-  animation: emergencySweep 12s linear infinite;
-  will-change: transform;
-}
+.emergency-beacon { animation: emergencySweep 12s linear infinite; will-change: transform; }
 
 @keyframes emergencyEdgePulse {
-  0%, 100% {
-    opacity: 0.08;
-  }
-  50% {
-    opacity: 0.22;
-  }
+  0%, 100% { opacity: 0.1; }
+  50%       { opacity: 0.28; }
 }
-
 .emergency-sweep-top,
 .emergency-sweep-bottom,
 .emergency-sweep-left,
@@ -342,38 +418,127 @@ select:focus-visible {
   will-change: opacity;
 }
 
-@keyframes fogDrift1 {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(60px, 30px);
-  }
+/* ═══════════════════════════════════════
+   PIXEL CROSSHAIR / RETICLE SPIN
+═══════════════════════════════════════ */
+@keyframes reticleSpin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-
-.lobby-fog-orb-1 {
-  animation: fogDrift1 22s ease-in-out infinite;
+.reticle-spin {
+  animation: reticleSpin 8s linear infinite;
   will-change: transform;
 }
 
-@keyframes fogDrift2 {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(-50px, -40px);
-  }
-}
-
-.lobby-fog-orb-2 {
-  animation: fogDrift2 28s ease-in-out infinite;
-  will-change: transform;
-}
-
+/* ═══════════════════════════════════════
+   BASE HTML & BODY
+═══════════════════════════════════════ */
 html,
 body {
-  background-color: var(--bg, #07080c);
-  color: var(--text, #e8edf8);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background-color: var(--bg, #0e0103);
+  color: var(--text, #fdeeed);
+  /* VT323 looks best at 20px+; below that it pixelates unpleasantly */
+  font-family: "VT323", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Courier New", monospace;
+  font-size: 20px;
+  line-height: 1.4;
   overflow-x: hidden;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+}
+
+/* Pixel font utilities */
+.font-pixel {
+  font-family: "Press Start 2P", monospace;
+  -webkit-font-smoothing: none;
+  font-smooth: never;
+  line-height: 1.6;
+}
+.font-vt323 {
+  font-family: "VT323", monospace;
+  font-size: 1.2em;
+  -webkit-font-smoothing: none;
+}
+
+/* ═══════════════════════════════════════
+   PUMPKIN ANIMATIONS
+═══════════════════════════════════════ */
+@keyframes pumpkinFloat {
+  0%, 100% { transform: translateY(0px) rotate(-0.5deg); }
+  33%       { transform: translateY(-10px) rotate(0.3deg); }
+  66%       { transform: translateY(-6px) rotate(-0.2deg); }
+}
+.pumpkin-float {
+  animation: pumpkinFloat 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes pumpkinEmerge {
+  0%   { opacity: 0; transform: scale(0.85) translateY(20px); }
+  100% { opacity: 1; transform: scale(1) translateY(0px); }
+}
+.pumpkin-emerge {
+  animation: pumpkinEmerge 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* ═══════════════════════════════════════
+   HALLOWEEN BUTTON CLICK BURST
+═══════════════════════════════════════ */
+@keyframes halloweenBurst {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255,69,0,0.5), inset 0 0 0 rgba(255,0,0,0);
+  }
+  18% {
+    transform: scale(0.955);
+    box-shadow:
+      0 0 0px   rgba(255,69,0,0),
+      0 0 30px  rgba(255,100,0,0.95),
+      0 0 60px  rgba(200,20,0,0.6),
+      inset 0 0 20px rgba(255,80,0,0.4);
+  }
+  55% {
+    transform: scale(1.025);
+    box-shadow:
+      0 0 50px  rgba(255,120,0,1),
+      0 0 100px rgba(200,30,0,0.7),
+      0 0 160px rgba(150,0,0,0.3),
+      inset 0 0 30px rgba(255,100,0,0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255,69,0,0.5);
+  }
+}
+
+.halloween-btn-burst {
+  animation: halloweenBurst 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Fire ripple — the expanding ring on click */
+@keyframes fireRipple {
+  0%   { transform: scale(0);   opacity: 0.9; }
+  100% { transform: scale(3.5); opacity: 0; }
+}
+.fire-ripple {
+  pointer-events: none;
+  position: absolute;
+  border-radius: 0;
+  background: radial-gradient(circle,
+    rgba(255,160,0,0.8) 0%,
+    rgba(255,60,0,0.5) 40%,
+    transparent 70%
+  );
+  animation: fireRipple 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  will-change: transform, opacity;
+}
+
+/* Screen flash on submit */
+@keyframes screenFlash {
+  0%   { opacity: 0; }
+  20%  { opacity: 0.12; }
+  100% { opacity: 0; }
+}
+.halloween-screen-flash {
+  animation: screenFlash 0.5s ease-out forwards;
 }
